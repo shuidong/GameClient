@@ -1,10 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 /// <summary>
 /// 主城面板
 /// </summary>
 public class HallPanel : BasePanel
 {
+    /// <summary>
+    /// 地图
+    /// </summary>
+    public Transform map;
+    /// <summary>
+    /// 菜单按钮
+    /// </summary>
+    public Transform menu;
+    /// <summary>
+    /// 功能按钮
+    /// </summary>
+    public Transform mIconA;
+
     private static HallPanel _inst;
     public static HallPanel GetInstance()
     {
@@ -22,5 +36,77 @@ public class HallPanel : BasePanel
     {
         isOpen = false;
         isRealOpen = false;
+    }
+    protected override void RealOpen()
+    {
+        if (map != null)
+        {
+            EventTriggerListener.Get(map.gameObject).onDrag = OnDragMap;
+        }
+        if(menu != null)
+        {
+            EventTriggerListener.Get(menu.gameObject).onClick = OnClickMenu;
+        }
+    }
+    /// <summary>
+    /// 拖动地图
+    /// </summary>
+    /// <param name="eventData"></param>
+    private void OnDragMap(PointerEventData eventData)
+    {
+        if(eventData.button == PointerEventData.InputButton.Left)
+        {
+            Debug.Log("拖动地图:"+eventData.delta);
+            if(map != null)
+            {
+                float x = 0,y=0;
+                x = map.localPosition.x + eventData.delta.x;
+                if (x < -724f)
+                {
+                    x = -724f;
+                }
+                if (x > 2451f)
+                {
+                    x = 2451f;
+                }
+                y = map.localPosition.y+eventData.delta.y;
+                if (y < -350f)
+                {
+                    y = -350f;
+                }
+                if (y > 1973f)
+                {
+                    y = 1973f;
+                }
+                map.localPosition = new Vector3(x,y,map.localPosition.z);
+            }
+        }
+    }
+    bool IsRot = true;
+    private void OnClickMenu(PointerEventData eventData)
+    {
+        if(eventData.button == PointerEventData.InputButton.Left)
+        {
+            Vector3 pos = new Vector3(442f,-341f,0);
+            Debug.Log("打开菜单");
+            if(menu != null)
+            {
+                float z = 0;
+                if(IsRot)
+                {
+                    IsRot = false;
+                    z = 15f;
+                    pos = new Vector3(-183.7f, -341f, 0);
+                }else
+                {
+                    IsRot = true;
+                }
+                TweenRotation.Begin(menu.gameObject, 0.2f, new Quaternion(0,0,z,0));
+            }
+            if(mIconA != null)
+            {
+                TweenPosition.Begin(mIconA.gameObject, 0.5f, pos);
+            }
+        }
     }
 }
