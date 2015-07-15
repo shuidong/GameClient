@@ -52,6 +52,7 @@ public class HallPanel : BasePanel
     /// 拖动地图
     /// </summary>
     /// <param name="eventData"></param>
+    float xMin = -509f, xMax = 512f, yMin = -381f, yMax = 453f;
     private void OnDragMap(PointerEventData eventData)
     {
         if(eventData.button == PointerEventData.InputButton.Left)
@@ -61,22 +62,22 @@ public class HallPanel : BasePanel
             {
                 float x = 0,y=0;
                 x = map.localPosition.x + eventData.delta.x;
-                if (x < -724f)
+                if (x < xMin)
                 {
-                    x = -724f;
+                    x = xMin;
                 }
-                if (x > 2451f)
+                if (x > xMax)
                 {
-                    x = 2451f;
+                    x = xMax;
                 }
                 y = map.localPosition.y+eventData.delta.y;
-                if (y < -350f)
+                if (y < yMin)
                 {
-                    y = -350f;
+                    y = yMin;
                 }
-                if (y > 1973f)
+                if (y > yMax)
                 {
-                    y = 1973f;
+                    y = yMax;
                 }
                 map.localPosition = new Vector3(x,y,map.localPosition.z);
             }
