@@ -41,7 +41,7 @@ public class HallPanel : BasePanel
     {
         if (map != null)
         {
-            EventTriggerListener.Get(map.gameObject).onDrag = OnDragMap;
+            //EventTriggerListener.Get(map.gameObject).onDrag = OnDragMap;
         }
         if(menu != null)
         {
