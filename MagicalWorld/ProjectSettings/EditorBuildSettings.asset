@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/Scenes/GameLogin.unity
   - enabled: 1
     path: Assets/Scenes/GameHall.unity
+  - enabled: 1
+    path: Assets/Scenes/GameFight.unity

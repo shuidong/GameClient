@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using CG3D.Utils;
 /// <summary>
 /// 主城场景
 /// </summary>
@@ -9,7 +10,7 @@ public class GameHall : MonoBehaviour
 	// Use this for initialization
 	void Start () {
         BasePanel.uiCenterRoot = uiCenter;
-        SceneManager.GetInstance().currScene = 1;
+        SceneManager.GetInstance().currScene = MyEnum.SCENE.GameHall;
         HallPanel.GetInstance().Open();
 	}
 	

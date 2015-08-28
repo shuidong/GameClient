@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using CG3D.Utils;
 /// <summary>
 /// 游戏登陆场景
 /// </summary>
@@ -10,7 +11,7 @@ public class GameLogin : MonoBehaviour {
 	void Start () 
     {
         BasePanel.uiCenterRoot = uiCenter;
-        SceneManager.GetInstance().currScene = 0;
+        SceneManager.GetInstance().currScene = MyEnum.SCENE.GameLogin;
         LoginPanel.GetInstance().Open();
 	}
 	
