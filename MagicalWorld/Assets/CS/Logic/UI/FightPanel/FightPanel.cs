@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class FightPanel : BasePanel
 {
+    public List<Transform> upPos,downPos;
     private static FightPanel _inst;
     public static FightPanel GetInstance()
     {
@@ -21,8 +22,4 @@ public class FightPanel : BasePanel
 	
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }
