@@ -156,7 +156,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967263
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -215,6 +215,22 @@ Prefab:
     - target: {fileID: 442052, guid: 7a748f4ec9468fd4fbbb7b9c24c28ecc, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 467442, guid: 7a748f4ec9468fd4fbbb7b9c24c28ecc, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 467442, guid: 7a748f4ec9468fd4fbbb7b9c24c28ecc, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 467442, guid: 7a748f4ec9468fd4fbbb7b9c24c28ecc, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 467442, guid: 7a748f4ec9468fd4fbbb7b9c24c28ecc, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a748f4ec9468fd4fbbb7b9c24c28ecc, type: 2}

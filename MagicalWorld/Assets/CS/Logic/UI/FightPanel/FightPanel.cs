@@ -4,6 +4,10 @@ using System.Collections.Generic;
 public class FightPanel : BasePanel
 {
     public List<Transform> upPos,downPos;
+    /// <summary>
+    /// 游戏角色模板
+    /// </summary>
+    public GameObject actorPrefab;
     private static FightPanel _inst;
     public static FightPanel GetInstance()
     {

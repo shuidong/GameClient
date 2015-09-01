@@ -477,6 +477,7 @@ MonoBehaviour:
   - {fileID: 430288}
   - {fileID: 423344}
   - {fileID: 468594}
+  actorPrefab: {fileID: 166224, guid: e5125e233ee159b4d97b679bfe52d2ed, type: 2}
 --- !u!114 &11452176
 MonoBehaviour:
   m_ObjectHideFlags: 1
