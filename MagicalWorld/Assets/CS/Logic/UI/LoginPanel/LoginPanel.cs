@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using CG3D.Config;
 /// <summary>
 /// 登陆面板
 /// </summary>
@@ -22,6 +23,10 @@ public class LoginPanel : BasePanel
     {
         isOpen = false;
         isRealOpen = false;
+    }
+    protected override void RealOpen()
+    {
+        StartCoroutine(ConfigManager.GetInstance().InitCfg());
     }
     /// <summary>
     /// 注册

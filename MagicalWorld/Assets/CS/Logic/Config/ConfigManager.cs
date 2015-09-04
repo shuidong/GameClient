@@ -44,7 +44,7 @@ namespace CG3D.Config
 			//Debug.Log("开始初始化配置:" + Time.time);
 			currCount = -1;
 			totalCount = 0;
-
+            ShipCfg.GetInstance().Init("ship.txt", ref totalCount); yield return new WaitForSeconds(0.02f);
 			
             //MyDebug.Log("初始化配置结束:" + Time.time);
 			currCount += 1;

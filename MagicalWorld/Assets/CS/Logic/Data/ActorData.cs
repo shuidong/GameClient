@@ -1,4 +1,5 @@
-﻿/// <summary>
+﻿using CG3D.Config;
+/// <summary>
 /// 角色数据类
 /// </summary>
 public class ActorData:BaseData
@@ -16,15 +17,25 @@ public class ActorData:BaseData
     /// </summary>
     public int attackSpeed;
     public int maxHP;
-    public ActorData(string _name,int _level,int _hp,int _attack,int _moveSpeed,int _attackSpeed)
+    public ActorData (DataAdapter _cfg)
     {
-        name = _name;
-        level = _level;
-        HP = _hp;
-        attack = _attack;
-        moveSpeed = _moveSpeed;
-        attackSpeed = _attackSpeed;
+        cfg = _cfg;
+        name = cfg.stringOf("name");
+        RefData(0, cfg.intOf("hp"), cfg.intOf("attack"), cfg.intOf("moveSpeed"), cfg.intOf("attackSpeed"), cfg.intOf("hp"));
     }
+    /// <summary>
+    /// 刷新数据
+    /// </summary>
+    public void RefData(int addLevel = 0,int addHP = 0, int addAttack = 0, int addMoveSpeed = 0, int addAttackSpeed = 0, int addMaxHP = 0)
+    {    
+        level += addLevel;
+        HP += addHP;
+        attack += addAttack;
+        moveSpeed += addMoveSpeed;
+        attackSpeed += addAttackSpeed;
+        maxHP += addMaxHP;
+    }
+    public int ID { get { return cfg.intOf("id"); } }
     /// <summary>
     /// 拷贝
     /// </summary>
