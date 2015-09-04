@@ -25,13 +25,4 @@ public class Single<T> : MonoBehaviour  where T :MonoBehaviour
         }
         return _inst;
     }
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

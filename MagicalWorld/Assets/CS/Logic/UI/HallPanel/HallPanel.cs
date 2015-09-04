@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
+using CG3D.Utils;
 /// <summary>
 /// 主城面板
 /// </summary>
@@ -47,6 +48,7 @@ public class HallPanel : BasePanel
         {
             EventTriggerListener.Get(menu.gameObject).onClick = OnClickMenu;
         }
+        EventTriggerListener.Get(mIconA.gameObject).onClick = OnOpenFight;
     }
     /// <summary>
     /// 拖动地图
@@ -109,5 +111,10 @@ public class HallPanel : BasePanel
                 TweenPosition.Begin(mIconA.gameObject, 0.5f, pos);
             }
         }
+    }
+    private void OnOpenFight(PointerEventData eventData)
+    {
+        if (eventData.button == PointerEventData.InputButton.Left)
+            SceneManager.GetInstance().Load(MyEnum.SCENE.GameFight.ToString());
     }
 }

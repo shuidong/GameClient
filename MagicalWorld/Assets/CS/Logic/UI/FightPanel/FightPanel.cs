@@ -8,6 +8,10 @@ public class FightPanel : BasePanel
     /// 游戏角色模板
     /// </summary>
     public GameObject actorPrefab;
+    /// <summary>
+    /// 出生点
+    /// </summary>
+    
     private static FightPanel _inst;
     public static FightPanel GetInstance()
     {
@@ -25,5 +29,12 @@ public class FightPanel : BasePanel
     override public void Start () {
 	
 	}
-	
+    protected override void RealOpen()
+    {
+        MonoActor actor = Util.AddChild<MonoActor>(upPos[0].gameObject,actorPrefab);
+        actor.IsPos = true;
+        actor.actorData = new ActorData(ShipCfg.GetInstance().GetById(100001));
+        actor.Init();
+    }
+
 }

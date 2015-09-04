@@ -72,7 +72,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 467936}
   m_Layer: 5
-  m_Name: up
+  m_Name: down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -252,7 +252,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 455928}
   m_Layer: 5
-  m_Name: down
+  m_Name: up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -292,8 +292,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 467936}
   - {fileID: 455928}
+  - {fileID: 467936}
   m_Father: {fileID: 22448258}
   m_RootOrder: 1
 --- !u!4 &423344
@@ -385,7 +385,7 @@ Transform:
   - {fileID: 423344}
   - {fileID: 468594}
   m_Father: {fileID: 422988}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!4 &459340
 Transform:
   m_ObjectHideFlags: 1
@@ -415,7 +415,7 @@ Transform:
   - {fileID: 452740}
   - {fileID: 425882}
   m_Father: {fileID: 422988}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &468594
 Transform:
   m_ObjectHideFlags: 1
@@ -464,20 +464,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upPos:
-  - {fileID: 495250}
-  - {fileID: 402896}
-  - {fileID: 459340}
-  - {fileID: 416834}
-  - {fileID: 452740}
-  - {fileID: 425882}
-  downPos:
   - {fileID: 498334}
   - {fileID: 448566}
   - {fileID: 451058}
   - {fileID: 430288}
   - {fileID: 423344}
   - {fileID: 468594}
+  downPos:
+  - {fileID: 495250}
+  - {fileID: 402896}
+  - {fileID: 459340}
+  - {fileID: 416834}
+  - {fileID: 452740}
+  - {fileID: 425882}
   actorPrefab: {fileID: 166224, guid: e5125e233ee159b4d97b679bfe52d2ed, type: 2}
+  BPUP: {x: -391, y: -297, z: 0}
+  BPDOWN: {x: -391, y: -297, z: 0}
 --- !u!114 &11452176
 MonoBehaviour:
   m_ObjectHideFlags: 1

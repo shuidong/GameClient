@@ -36,6 +36,7 @@ public class ActorData:BaseData
         maxHP += addMaxHP;
     }
     public int ID { get { return cfg.intOf("id"); } }
+    public string icon { get { return cfg.stringOf("icon"); } }
     /// <summary>
     /// 拷贝
     /// </summary>

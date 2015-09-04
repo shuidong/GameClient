@@ -6,6 +6,7 @@ public class GameFight : MonoBehaviour {
     void Start () {
         BasePanel.uiCenterRoot = uiCenter;
         SceneManager.GetInstance().currScene = MyEnum.SCENE.GameFight;
+        FightPanel.GetInstance().Open();
     }
 	
 	// Update is called once per frame

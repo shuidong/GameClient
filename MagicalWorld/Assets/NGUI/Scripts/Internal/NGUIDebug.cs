@@ -69,12 +69,11 @@ public class NGUIDebug : MonoBehaviour
 		else Debug.Log(text);
 #endif
 	}
+    /// <summary>
+    /// Add a new log entry, printing all of the specified parameters.
+    /// </summary>
 
-	/// <summary>
-	/// Add a new log entry, printing all of the specified parameters.
-	/// </summary>
-
-	static public void Log (params object[] objs)
+    static public void Log (params object[] objs)
 	{
 		string text = "";
 
