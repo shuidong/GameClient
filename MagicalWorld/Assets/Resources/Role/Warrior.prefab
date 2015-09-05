@@ -59,6 +59,7 @@ GameObject:
   - 222: {fileID: 22264396}
   - 114: {fileID: 11480922}
   - 114: {fileID: 11464314}
+  - 61: {fileID: 6170708}
   m_Layer: 5
   m_Name: Warrior
   m_TagString: Untagged
@@ -159,6 +160,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 22438574}
   m_RootOrder: 1
+--- !u!61 &6170708
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166224}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 73, y: 73}
 --- !u!114 &11419742
 MonoBehaviour:
   m_ObjectHideFlags: 1

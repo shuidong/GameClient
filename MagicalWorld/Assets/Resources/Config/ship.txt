@@ -1,3 +1,6 @@
 ﻿id	type	icon	name	desc	hp	attack	moveSpeed	attackSpeed
 编号	类型	图标	名字	描述	血量	攻击力	移动速度	攻击速度
 100001	1	ship01	鱼鹰	空中堡垒	100	10	4	5
+100002	1	ship02	基洛夫	地狱堡垒	100	10	4	5
+100003	1	ship03	基洛夫斯基	地狱堡垒	100	10	4	5
+100004	1	ship04	超级基洛夫	地狱堡垒	100	10	4	5
